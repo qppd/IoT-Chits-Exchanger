@@ -2,6 +2,7 @@
 
 #include "COIN_SLOT.h"
 #include "SERVO_DISPENSER.h"
+#include "BILL_ACCEPTOR.h"
 
 const int buttonPin = 2;    // Pin for button input
 const int ledPin = 13;      // Pin for LED output
@@ -14,6 +15,7 @@ void setup() {
   Serial.begin(9600);           // Start serial communication
   initALLANCOIN(); // Initialize coin slot interrupt
   initSERVO(); // Initialize servo dispenser
+  initBILLACCEPTOR(); // Initialize bill acceptor interrupt
 }
 
 void loop() {
@@ -31,6 +33,12 @@ void loop() {
     coinInserted = false; // Reset the flag
     Serial.println("Coin inserted!");
     // Add any additional logic for coin insertion here
+  }
+
+  if (billAccepted) {
+    billAccepted = false; // Reset the flag
+    Serial.println("Bill accepted!");
+    // Add any additional logic for bill acceptance here
   }
 
   // Example usage of servo dispenser
