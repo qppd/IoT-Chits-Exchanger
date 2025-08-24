@@ -4,6 +4,7 @@
 #include "SERVO_DISPENSER.h"
 #include "BILL_ACCEPTOR.h"
 #include "I2C_LCD.h"
+#include "TACTILE_BUTTON.h"
 
 const int buttonPin = 2;    // Pin for button input
 const int ledPin = 13;      // Pin for LED output
@@ -19,6 +20,10 @@ void setup() {
   initBILLACCEPTOR(); // Initialize bill acceptor interrupt
   initLCD(); // Initialize the LCD
   displayMessage("Welcome!", 0); // Display a welcome message on the first row
+
+  for (int i = 0; i < numOfInputs; i++) {
+    pinMode(inputPins[i], INPUT_PULLUP); // Initialize button pins as input with pull-up
+  }
 }
 
 void loop() {
@@ -43,6 +48,9 @@ void loop() {
     Serial.println("Bill accepted!");
     // Add any additional logic for bill acceptance here
   }
+
+  setInputFlags(); // Check button states
+  resolveInputFlags(); // Handle button actions
 
   // Example usage of the servo dispenser
   operateSERVO(0, 0, 90, 10); // Operate servo on channel 0 from 0 to 90 degrees
