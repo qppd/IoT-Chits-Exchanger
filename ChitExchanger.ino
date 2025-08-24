@@ -6,6 +6,7 @@
 #include "I2C_LCD.h"
 #include "TACTILE_BUTTON.h"
 #include "COIN_HOPPER.h"
+#include "PIEZO_BUZZER.h"
 
 const int buttonPin = 2;    // Pin for button input
 const int ledPin = 13;      // Pin for LED output
@@ -21,6 +22,7 @@ void setup() {
   initBILLACCEPTOR(); // Initialize bill acceptor interrupt
   initLCD(); // Initialize the LCD
   initCoinHopper(); // Initialize coin hopper
+  initBuzzer(); // Initialize the buzzer
   displayMessage("Welcome!", 0); // Display a welcome message on the first row
 
   for (int i = 0; i < numOfInputs; i++) {
@@ -40,12 +42,14 @@ void loop() {
   }
 
   if (coinInserted) {
+    playTone(1000, 200); // Play a 1kHz tone for 200ms
     coinInserted = false; // Reset the flag
     Serial.println("Coin inserted!");
     // Add any additional logic for coin insertion here
   }
 
   if (billAccepted) {
+    playTone(1500, 300); // Play a 1.5kHz tone for 300ms
     billAccepted = false; // Reset the flag
     Serial.println("Bill accepted!");
     // Add any additional logic for bill acceptance here

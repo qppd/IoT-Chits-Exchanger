@@ -24,6 +24,7 @@ The IoT Chits Exchanger is a smart system designed to automate the process of ex
 - **Power Supply**: Provides power to all components.
 - **Wires and Connectors**: For connecting all components securely.
 - **Resistors and Capacitors**: For signal conditioning and stability.
+- **Piezo Buzzer**: Provides audio feedback for user actions and system events.
 
 ## Software Components
 - **Interrupt Service Routines (ISRs)**: Handle real-time events like coin and bill insertion.
