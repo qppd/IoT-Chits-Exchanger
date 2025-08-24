@@ -9,7 +9,8 @@ The IoT Chits Exchanger is a smart system designed to automate the process of ex
 - **Servo Dispenser**: Dispenses chits using a servo motor controlled by the PCA9685 driver.
 - **I2C LCD Display**: A 20x4 LCD screen displays messages and instructions to the user.
 - **Tactile Buttons**: Provides user input options with debounce logic for reliability.
-- **Modular Design**: Each component is modular, making it easy to test and replace.
+- **Coin Hopper**: Dispenses coins based on user input.
+- **Integration with Arduino Libraries**: Utilizes libraries like Adafruit PWM Servo Driver and LiquidCrystal_I2C for efficient hardware control.
 
 ## Hardware Components
 - **ESP32 Microcontroller**: The brain of the system, responsible for controlling all peripherals.
@@ -19,13 +20,17 @@ The IoT Chits Exchanger is a smart system designed to automate the process of ex
 - **PCA9685 Driver**: Controls the servo motor.
 - **20x4 I2C LCD**: Displays messages and instructions.
 - **Tactile Buttons**: Allows user interaction.
+- **Coin Hopper**: Dispenses coins based on user input.
 - **Power Supply**: Provides power to all components.
+- **Wires and Connectors**: For connecting all components securely.
+- **Resistors and Capacitors**: For signal conditioning and stability.
 
 ## Software Components
 - **Interrupt Service Routines (ISRs)**: Handle real-time events like coin and bill insertion.
 - **Debounce Logic**: Ensures reliable detection of user inputs.
 - **LCD Control**: Manages the display of messages on the LCD screen.
 - **Servo Control**: Handles the movement of the servo motor for chit dispensing.
+- **Coin Hopper Control**: Manages the dispensing of coins.
 - **Pin Configuration**: Centralized file for managing pin assignments.
 
 ## Progress
@@ -35,6 +40,7 @@ The IoT Chits Exchanger is a smart system designed to automate the process of ex
 - Servo dispenser control using PCA9685.
 - 20x4 I2C LCD configuration for message display.
 - Tactile button handling with debounce logic.
+- Coin hopper functionality for dispensing coins.
 
 ### In Progress
 - Integration testing of all components.
@@ -79,6 +85,8 @@ The pin configuration is defined in `PIN_CONFIGURATION.h`. Below is a summary:
 - **Servo Dispenser**: Pins 21 (SDA) and 22 (SCL)
 - **LCD Button**: Pin 8
 - **Coin Button**: Pin 9
+- **Coin Hopper Motor**: Pin 10
+- **Coin Hopper Sensor**: Pin 11
 
 ## Contributing
 Contributions are welcome! To contribute:
@@ -90,12 +98,7 @@ Contributions are welcome! To contribute:
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contact
-For questions or support, please contact the repository owner at [qppd@example.com](mailto:qppd@example.com).
+For questions or support, please contact the repository owner
 
 ## Future Enhancements
 - **Database Integration**: Add a database to log transactions.
-- **Mobile App**: Develop a companion mobile app for remote monitoring.
-- **Advanced Security**: Implement security features to prevent fraud.
-
----
-This README provides a comprehensive overview of the IoT Chits Exchanger project. For more details, refer to the source code and documentation.
