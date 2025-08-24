@@ -2,8 +2,14 @@
 #define COIN_SLOT_H
 
 #include <Arduino.h>
+#include "PIN_CONFIGURATION.h"
 
-#define coinPin 27
+#undef coinPin
+#undef billPin
+#undef SERVO_SDA
+#undef SERVO_SCL
+#undef LCD_BUTTON_PIN
+#undef COIN_BUTTON_PIN
 
 extern volatile bool coinInserted;
 extern volatile unsigned long coinLastDebounceTime;

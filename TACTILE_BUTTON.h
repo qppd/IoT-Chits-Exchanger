@@ -2,9 +2,10 @@
 #define TACTILE_BUTTON_H
 
 #include <Arduino.h>
+#include "PIN_CONFIGURATION.h"
 
-#define LCD_BUTTON_PIN 8
-#define COIN_BUTTON_PIN 9
+#undef LCD_BUTTON_PIN
+#undef COIN_BUTTON_PIN
 
 // Inputs and Button Logic
 const int numOfInputs = 2;  // number of buttons switches

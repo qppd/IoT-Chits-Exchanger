@@ -2,8 +2,9 @@
 #define BILL_ACCEPTOR_H
 
 #include <Arduino.h>
+#include "PIN_CONFIGURATION.h"
 
-#define billPin 26
+#undef billPin
 
 extern volatile bool billAccepted;
 extern volatile unsigned long billLastDebounceTime;
