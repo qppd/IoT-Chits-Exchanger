@@ -1,61 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>IoT Chits Exchanger</title>
-</head>
-<body>
-  <h1>IoT Chits Exchanger</h1>
-  <p>This project is an IoT-based Chits Exchanger system designed to handle coin and bill inputs, dispense chits using a servo mechanism, and display information on an LCD screen. The system is built using an ESP32 microcontroller and various peripherals.</p>
+# IoT Chits Exchanger
 
-  <h2>Features</h2>
-  <ul>
-    <li>Coin slot with interrupt-based pulse detection</li>
-    <li>Bill acceptor with debounce logic</li>
-    <li>Servo dispenser for chit dispensing</li>
-    <li>20x4 I2C LCD for displaying messages</li>
-    <li>Tactile buttons for user input</li>
-  </ul>
+This project is an IoT-based Chits Exchanger system designed to handle coin and bill inputs, dispense chits using a servo mechanism, and display information on an LCD screen. The system is built using an ESP32 microcontroller and various peripherals.
 
-  <h2>Progress</h2>
-  <h3>Completed</h3>
-  <ul>
-    <li>Implemented coin slot functionality with debounce logic</li>
-    <li>Integrated bill acceptor using TB74 pulse logic</li>
-    <li>Added servo dispenser control using PCA9685</li>
-    <li>Configured 20x4 I2C LCD for displaying messages</li>
-    <li>Added tactile button handling with debounce logic</li>
-  </ul>
+## Features
+- Coin slot with interrupt-based pulse detection
+- Bill acceptor with debounce logic
+- Servo dispenser for chit dispensing
+- 20x4 I2C LCD for displaying messages
+- Tactile buttons for user input
 
-  <h3>In Progress</h3>
-  <ul>
-    <li>Integration testing of all components</li>
-    <li>Optimizing code for performance and reliability</li>
-  </ul>
+## Progress
+### Completed
+- Implemented coin slot functionality with debounce logic
+- Integrated bill acceptor using TB74 pulse logic
+- Added servo dispenser control using PCA9685
+- Configured 20x4 I2C LCD for displaying messages
+- Added tactile button handling with debounce logic
 
-  <h3>Not Yet Done</h3>
-  <ul>
-    <li>Implementing a database for transaction logging</li>
-    <li>Creating a detailed user manual</li>
-  </ul>
+### In Progress
+- Integration testing of all components
+- Optimizing code for performance and reliability
 
-  <h2>Setup Instructions</h2>
-  <ol>
-    <li>Clone this repository to your local machine.</li>
-    <li>Install the required libraries in the Arduino IDE:
-      <ul>
-        <li>Adafruit PWM Servo Driver</li>
-        <li>LiquidCrystal_I2C</li>
-      </ul>
-    </li>
-    <li>Connect the hardware components as per the pin configuration in the code.</li>
-    <li>Upload the code to the ESP32 using the Arduino IDE.</li>
-    <li>Test each component individually before running the full system.</li>
-  </ol>
+### Not Yet Done
+- Implementing a database for transaction logging
+- Creating a detailed user manual
 
-  <h2>Contributing</h2>
-  <p>Contributions are welcome! Please fork this repository and submit a pull request with your changes.</p>
+## Setup Instructions
+1. Clone this repository to your local machine.
+2. Install the required libraries in the Arduino IDE:
+   - Adafruit PWM Servo Driver
+   - LiquidCrystal_I2C
+3. Connect the hardware components as per the pin configuration in the code.
+4. Upload the code to the ESP32 using the Arduino IDE.
+5. Test each component individually before running the full system.
 
-  <h2>License</h2>
-  <p>This project is licensed under the MIT License.</p>
-</body>
-</html>
+## Contributing
+Contributions are welcome! Please fork this repository and submit a pull request with your changes.
+
+## License
+This project is licensed under the MIT License.
