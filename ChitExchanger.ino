@@ -5,6 +5,7 @@
 #include "BILL_ACCEPTOR.h"
 #include "I2C_LCD.h"
 #include "TACTILE_BUTTON.h"
+#include "COIN_HOPPER.h"
 
 const int buttonPin = 2;    // Pin for button input
 const int ledPin = 13;      // Pin for LED output
@@ -19,6 +20,7 @@ void setup() {
   initSERVO(); // Initialize servo dispenser
   initBILLACCEPTOR(); // Initialize bill acceptor interrupt
   initLCD(); // Initialize the LCD
+  initCoinHopper(); // Initialize coin hopper
   displayMessage("Welcome!", 0); // Display a welcome message on the first row
 
   for (int i = 0; i < numOfInputs; i++) {
@@ -59,4 +61,8 @@ void loop() {
   // Example usage of the LCD
   displayMessage("Waiting for input...", 1); // Display a message on the second row
   delay(2000); // Wait for 2 seconds
+
+  // Example usage of coin hopper
+  dispenseCoins(5); // Dispense 5 coins
+  delay(5000); // Wait for 5 seconds before next operation
 }

@@ -34,7 +34,6 @@
 
   <h3>Not Yet Done</h3>
   <ul>
-    <li>Adding a web interface for remote monitoring</li>
     <li>Implementing a database for transaction logging</li>
     <li>Creating a detailed user manual</li>
   </ul>
